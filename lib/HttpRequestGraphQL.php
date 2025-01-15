@@ -46,12 +46,12 @@ class HttpRequestGraphQL extends HttpRequestJson
 
         self::$httpHeaders = $httpHeaders;
 
-        if (is_array($variables)) {
+        // if (is_array($variables)) {
             self::$postDataGraphQL = json_encode(['query' => $data, 'variables' => $variables]);
             self::$httpHeaders['Content-type'] = 'application/json';
-        } else {
-            self::$httpHeaders['Content-type'] = 'application/graphql';
-        }
+        // } else {
+            // self::$httpHeaders['Content-type'] = 'application/graphql';
+        // }
     }
 
     /**
